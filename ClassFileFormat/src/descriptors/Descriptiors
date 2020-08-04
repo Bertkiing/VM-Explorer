@@ -1,0 +1,107 @@
+[4.3 描述符](https://docs.oracle.com/javase/specs/jvms/se14/html/jvms-4.html#jvms-4.3)
+
+> 描述符(Descriptors)属于Class文件的重要组成部分，它可以分为3部分：
+> 1. Grammar Notation(语法符号)
+> 2. Field Descriptors(字段描述符)：在看英文文档，尤其是编程语言的文档，建议将单词Field翻译为字段比较合适，
+译为『变量』会有时会误导你。(因为变量还有常量，实际上，字段包含了两者)
+> 3. Method Descriptors(方法描述符): 包含了 参数描述符 & 返回值描述符
+
+---
+
+##### 4.3.1 Field Descriptors(字段描述符)
+
+字段类型包括：基本类型(BaseType),对象类型(ObjectType)和数组类型(ArrayType)
+
+1. 字段类型以及其解释
+
+| FieldType    | Type      | Interpretation(解释) |
+|:-------------|:----------|:--------------------|
+| B            | byte      |                     |
+| C            | char      |                     |
+| S            | short     |                     |
+| I            | int       |                     |
+| Z            | boolean   |                     |
+| J            | long      |                     |
+| F            | float     |                     |
+| D            | double    |                     |
+| L ClassName; | reference | ClassName对应的实例   |
+| [            | reference | 一维数组              |
+
+
+
+具体格式如下:
+descriptor: 对应的FieldType
+
+
+* 基本类型: descriptor: (one of) B,C,D,F,I,J,S,Z
+
+
+* 对象类型: descriptor: L ClassName ;
+
+
+* 数组类型: descriptor: [ 元素对应的FieldType
+
+我们可以通过**javap**查看Java字节码来验证。  
+需要注意的是:
+> N维数组将会采用N个[ ,如 int[][] 字节码中表示为 [[I
+
+
+
+##### 4.3.2 Method Descriptors(方法描述符)
+我们都知道，函数的字段主要包括**参数**和**返回值**两部分，同理，方法描述符也分为两部分：
+参数描述符(ParameterDescriptor)和返回值描述符(ReturnDescriptor)
+
+由于函数存在无返回值的情况，所以JDK为此内置了一种**VoidDescriptor**.
+
+| VoidDescriptor | 解释                         |
+|:---------------|:----------------------------|
+| V              | return no value(函数无返回值) |
+
+具体格式如下:
+>descriptor: (ParameterDescriptor...) ReturnDescriptor
+
+>其中ParameterDescriptor的取值范围就是FileType;  
+>而 ReturnDescriptor 的取值范围是 FileType + VoidDescriptor;
+
+通过**javap**进行验证。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

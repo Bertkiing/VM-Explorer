@@ -1,0 +1,178 @@
+Classfile /Users/bertking/IdeaProjects/src/jvm/FileDescriptions.class
+  Last modified 2020年8月3日; size 751 bytes
+  SHA-256 checksum 2777f1dce1cb4b62385d07f5debc4332e1ab4211ab56dc1488f685e7979aef79
+  Compiled from "FileDescriptions.java"
+public class jvm.descriptors.FieldDescriptions
+  minor version: 0
+  major version: 57
+  flags: (0x0021) ACC_PUBLIC, ACC_SUPER
+  this_class: #8                          // jvm/FileDescriptions
+  super_class: #2                         // java/lang/Object
+  interfaces: 0, fields: 11, methods: 1, attributes: 1
+Constant pool:
+   #1 = Methodref          #2.#3          // java/lang/Object."<init>":()V
+   #2 = Class              #4             // java/lang/Object
+   #3 = NameAndType        #5:#6          // "<init>":()V
+   #4 = Utf8               java/lang/Object
+   #5 = Utf8               <init>
+   #6 = Utf8               ()V
+   #7 = Fieldref           #8.#9          // jvm/FileDescriptions.mByte:B
+   #8 = Class              #10            // jvm/FileDescriptions
+   #9 = NameAndType        #11:#12        // mByte:B
+  #10 = Utf8               jvm/FileDescriptions
+  #11 = Utf8               mByte
+  #12 = Utf8               B
+  #13 = Fieldref           #8.#14         // jvm/FileDescriptions.mChar:C
+  #14 = NameAndType        #15:#16        // mChar:C
+  #15 = Utf8               mChar
+  #16 = Utf8               C
+  #17 = Fieldref           #8.#18         // jvm/FileDescriptions.mShort:S
+  #18 = NameAndType        #19:#20        // mShort:S
+  #19 = Utf8               mShort
+  #20 = Utf8               S
+  #21 = Fieldref           #8.#22         // jvm/FileDescriptions.mInt:I
+  #22 = NameAndType        #23:#24        // mInt:I
+  #23 = Utf8               mInt
+  #24 = Utf8               I
+  #25 = Fieldref           #8.#26         // jvm/FileDescriptions.mBoolean:Z
+  #26 = NameAndType        #27:#28        // mBoolean:Z
+  #27 = Utf8               mBoolean
+  #28 = Utf8               Z
+  #29 = Long               10l
+  #31 = Fieldref           #8.#32         // jvm/FileDescriptions.mLong:J
+  #32 = NameAndType        #33:#34        // mLong:J
+  #33 = Utf8               mLong
+  #34 = Utf8               J
+  #35 = Float              3.14f
+  #36 = Fieldref           #8.#37         // jvm/FileDescriptions.mFloat:F
+  #37 = NameAndType        #38:#39        // mFloat:F
+  #38 = Utf8               mFloat
+  #39 = Utf8               F
+  #40 = Double             3.1415926d
+  #42 = Fieldref           #8.#43         // jvm/FileDescriptions.mDouble:D
+  #43 = NameAndType        #44:#45        // mDouble:D
+  #44 = Utf8               mDouble
+  #45 = Utf8               D
+  #46 = String             #47            // Bertking
+  #47 = Utf8               Bertking
+  #48 = Fieldref           #8.#49         // jvm/FileDescriptions.name:Ljava/lang/String;
+  #49 = NameAndType        #50:#51        // name:Ljava/lang/String;
+  #50 = Utf8               name
+  #51 = Utf8               Ljava/lang/String;
+  #52 = Fieldref           #8.#53         // jvm/FileDescriptions.mOneDimensionIntArray:[I
+  #53 = NameAndType        #54:#55        // mOneDimensionIntArray:[I
+  #54 = Utf8               mOneDimensionIntArray
+  #55 = Utf8               [I
+  #56 = Class              #57            // "[[I"
+  #57 = Utf8               [[I
+  #58 = Fieldref           #8.#59         // jvm/FileDescriptions.mTwoDimensionIntArray:[[I
+  #59 = NameAndType        #60:#57        // mTwoDimensionIntArray:[[I
+  #60 = Utf8               mTwoDimensionIntArray
+  #61 = Utf8               Code
+  #62 = Utf8               LineNumberTable
+  #63 = Utf8               SourceFile
+  #64 = Utf8               FileDescriptions.java
+{
+  public byte mByte;
+    descriptor: B  // 基本类型: byte
+    flags: (0x0001) ACC_PUBLIC
+
+  public char mChar;
+    descriptor: C // 基本类型: char
+    flags: (0x0001) ACC_PUBLIC
+
+  public short mShort;
+    descriptor: S // 基本类型: short
+    flags: (0x0001) ACC_PUBLIC
+
+  public int mInt;
+    descriptor: I // 基本类型: int
+    flags: (0x0001) ACC_PUBLIC
+
+  public boolean mBoolean;
+    descriptor: Z // 基本类型: boolean
+    flags: (0x0001) ACC_PUBLIC
+
+  public long mLong;
+    descriptor: J //基本类型: long
+    flags: (0x0001) ACC_PUBLIC
+
+  public float mFloat;
+    descriptor: F  // 基本类型: float
+    flags: (0x0001) ACC_PUBLIC
+
+  public double mDouble;
+    descriptor: D // 基本类型：double
+    flags: (0x0001) ACC_PUBLIC
+
+  public java.lang.String name;
+    descriptor: Ljava/lang/String; // 对象类型(String类型)
+    flags: (0x0001) ACC_PUBLIC
+
+  public int[] mOneDimensionIntArray;
+    descriptor: [I // 一维整型数组(one array dimension int)
+    flags: (0x0001) ACC_PUBLIC
+
+  public int[][] mTwoDimensionIntArray;
+    descriptor: [[I // 二维整型数组(two array dimension int )
+    flags: (0x0001) ACC_PUBLIC
+
+  public jvm.descriptors.FieldDescriptions();
+    descriptor: ()V // 方法描述符(Method Descriptor)
+    flags: (0x0001) ACC_PUBLIC
+    Code:
+      stack=3, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: aload_0
+         5: bipush        65
+         7: putfield      #7                  // Field mByte:B
+        10: aload_0
+        11: bipush        65
+        13: putfield      #13                 // Field mChar:C
+        16: aload_0
+        17: iconst_1
+        18: putfield      #17                 // Field mShort:S
+        21: aload_0
+        22: iconst_1
+        23: putfield      #21                 // Field mInt:I
+        26: aload_0
+        27: iconst_1
+        28: putfield      #25                 // Field mBoolean:Z
+        31: aload_0
+        32: ldc2_w        #29                 // long 10l
+        35: putfield      #31                 // Field mLong:J
+        38: aload_0
+        39: ldc           #35                 // float 3.14f
+        41: putfield      #36                 // Field mFloat:F
+        44: aload_0
+        45: ldc2_w        #40                 // double 3.1415926d
+        48: putfield      #42                 // Field mDouble:D
+        51: aload_0
+        52: ldc           #46                 // String Bertking
+        54: putfield      #48                 // Field name:Ljava/lang/String;
+        57: aload_0
+        58: iconst_5
+        59: newarray       int
+        61: putfield      #52                 // Field mOneDimensionIntArray:[I
+        64: aload_0
+        65: iconst_3
+        66: iconst_3
+        67: multianewarray #56,  2            // class "[[I"
+        71: putfield      #58                 // Field mTwoDimensionIntArray:[[I
+        74: return
+      LineNumberTable:
+        line 9: 0
+        line 10: 4
+        line 11: 10
+        line 12: 16
+        line 13: 21
+        line 14: 26
+        line 15: 31
+        line 16: 38
+        line 17: 44
+        line 18: 51
+        line 19: 57
+        line 20: 64
+}
+SourceFile: "FileDescriptions.java"
